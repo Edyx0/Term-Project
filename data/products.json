@@ -8,26 +8,28 @@
 \f0\fs24 \cf0 [\
   \{\
     "id": \'93i1\'94,\
-    "name": \'93Banana\'94,\
-    "category": \'93Food\'94s,\
-    "price": 4.99,\
-    "stock": 150,\
-    "description": \'93Tasty bananas from T\'fcrkiye.\'94\
-  \},\
-  \{\
-    "id": \'93i2\'94,\
-    "name": "Wireless Mouse",\
+    "name": \'93Camera\'94,\
     "category": "Electronics",\
-    "price": 49.99,\
-    "stock": 45,\
-    "description": "Ergonomic wireless mouse with 5 buttons."\
+    "price": 1299.99,\
+    "stock": 15,\
+    "description": \'9312mm Canon Camera.\'94\
+  \},\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+\cf0   \{\
+    "id": \'93i2\'94,\
+    "name": \'93Grape\'94s,\
+    "category": \'93Food\'94,\
+    "price": 2.59,\
+    "stock": 150,\
+    "description": \'93Tasty Grapes\'94\
   \},\
   \{\
     "id": \'93i3\'94,\
-    "name": "Python Essentials",\
-    "category": "Books",\
-    "price": 39.95,\
-    "stock": 100,\
-    "description": "A must-read for all Python beginners."\
+    "name": \'93Witcher 3\'94,\
+    "category": \'93Games\'94,\
+    "price": 129.99,\
+    "stock": 22,\
+    "description": \'93Witcher 3 game for PlayStation.\'94\
   \}\
-]}
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+\cf0 ]}

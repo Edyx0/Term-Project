@@ -1,8 +1,9 @@
 import json
+path = "data/products.json"
 def load_json(path: str) -> dict | list:
-
+    #json file reaching must be fixed
     try:
-        with open(path, 'r') as file:
+        with open(path, 'r', encoding="utf-8") as file:
             return json.load(file)
     except FileNotFoundError:
         return []
@@ -13,11 +14,8 @@ def load_json(path: str) -> dict | list:
         return []
 
 def write_json(path: str, data: dict | list) -> None:
-    """
-    Writes Python data to a file as JSON.
-    """
     try:
-        with open(path, 'w') as file:
+        with open(path, 'w', encoding="utf-8") as file:
             json.dump(data, file, indent=2)
     except Exception as e:
         print(f"Error writing file: {e}")

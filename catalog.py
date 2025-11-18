@@ -3,6 +3,7 @@ PRODUCT_FILE_PATH = "data/products.json"
 
 def load_products(path: str = PRODUCT_FILE_PATH) -> list:
     products = storage.load_json(path)
+    print(products)
     return products
 
 
