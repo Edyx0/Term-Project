@@ -1,7 +1,7 @@
 import storage
 PRODUCT_FILE_PATH = "data/products.json"
 
-def load_products(path: str = PRODUCT_FILE_PATH) -> list:
+def load_products(path: str) -> list:
     products = storage.load_json(path)
     print(products)
     return products
@@ -48,7 +48,7 @@ def add_new_product(products: list, product_data: dict) -> dict:
     return products
 
 #test 
-load_products()
-#not completely working
+load_products("data/products.json")
+#working 19.11.2025
 
     

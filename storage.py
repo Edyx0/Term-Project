@@ -1,17 +1,10 @@
 import json
 path = "data/products.json"
 def load_json(path: str) -> dict | list:
-    #json file reaching must be fixed
-    try:
-        with open(path, 'r', encoding="utf-8") as file:
-            return json.load(file)
-    except FileNotFoundError:
-        return []
-    except json.JSONDecodeError:
-        return []
-    except Exception as e:
-        print(f"Error: {e}")
-        return []
+#working 19.11.2025
+    path = "data/products.json"
+    with open(path, 'r', encoding="utf-8") as file:
+        return json.load(file)
 
 def write_json(path: str, data: dict | list) -> None:
     try:
