@@ -35,9 +35,11 @@ def filter_by_category(products: list, category: str) -> list:
 def update_product_stock(products: list, product_id: str, delta: int) -> bool:
     for product in products:
         if product.get("id") == product_id:
+            if product["stock"] + delta < 0:
+                return False  # negative stock
             product["stock"] += delta
-            print(f"New Stock for product ID: {product_id} is {product['stock']}")
             return True
+    return False
 
 
             

@@ -1,4 +1,5 @@
 import json
+import os
 path = "data/products.json"
 def load_json(path: str) -> dict | list:
 #working 19.11.2025
@@ -14,8 +15,9 @@ def write_json(path: str, data: dict | list) -> None:
         print(f"Error writing file: {e}")
 
 def ensure_storage_structure(base_dir: str) -> None:
-    return
-    #check storage working properly
+    directories = ['data', 'receipts', 'backups', 'reports']
+    for folder in directories:
+        os.makedirs(os.path.join(base_dir, folder), exist_ok=True)
 
 def backup_file(source_path: str, backup_dir: str) -> str:
     return
