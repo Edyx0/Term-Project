@@ -35,7 +35,7 @@ def update_quantity(cart: dict, product_id: str, quantity: int) -> dict:
 def calculate_totals(cart: dict, tax_rate: float, discounts: list) -> dict:
     subtotal = Decimal("0.00")
     for item in cart.values():
-        subtotal += item["price"] * (str(item["quantity"]))
+        subtotal += item["price"] * (int(item["quantity"]))
 
     total_discount = Decimal("0.00")
     for discount in discounts:
@@ -55,3 +55,4 @@ def apply_promo_code(cart: dict, code: str, promo_rules: dict) -> dict:
     if code in promo_rules:
         return promo_rules[code]
     return {"type": "none", "value": 0}
+    
