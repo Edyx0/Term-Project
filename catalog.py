@@ -1,17 +1,16 @@
 import storage
+
 PRODUCT_FILE_PATH = "data/products.json"
 
-def load_products(path: str) -> list:
+def load_products(path):
     products = storage.load_json(path)
-    print(products)
     return products
 
-
-def save_products(products: list, path: str = PRODUCT_FILE_PATH) -> None:
+def save_products(products, path = PRODUCT_FILE_PATH):
     storage.write_json(path, products)
     print("Products saved")
 
-def search_products(keyword: str, products: list,) -> list:
+def search_products(keyword, products):
     results = []
     st = keyword.lower()
 
@@ -20,8 +19,7 @@ def search_products(keyword: str, products: list,) -> list:
             results.append(product)  
     return results
 
-
-def filter_by_category(products: list, category: str) -> list:
+def filter_by_category(products, category):
     results = []
     match_category = category.lower()
     
@@ -31,26 +29,15 @@ def filter_by_category(products: list, category: str) -> list:
             
     return results
 
-
-def update_product_stock(products: list, product_id: str, delta: int) -> bool:
+def update_product_stock(products, product_id, delta):
     for product in products:
         if product.get("id") == product_id:
             if product["stock"] + delta < 0:
-                return False  # negative stock
+                return False
             product["stock"] += delta
             return True
     return False
 
-
-            
-            
-
-def add_new_product(products: list, product_data: dict) -> dict:
+def add_new_product(products, product_data):
     products.append(product_data)
     return products
-
-#test 
-load_products("data/products.json")
-#working 19.11.2025
-
-    

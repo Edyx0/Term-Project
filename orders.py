@@ -29,7 +29,7 @@ def generate_receipt(order, directory):
     file = open(filename, "w")
     file.write("RECEIPT\n")
     file.write("Order ID: " + order["order_id"] + "\n")
-    file.write("Customer: " + order["customer"]["name"] + "\n")
+    file.write("Customer: " + order["customer"] + "\n")
     file.write("-" * 20 + "\n")
     
     for item_id in order["items"]:

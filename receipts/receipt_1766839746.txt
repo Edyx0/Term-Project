@@ -1,0 +1,5 @@
+RECEIPT
+Order ID: 1766839746
+Customer: Test User
+--------------------
+Grapes x10
